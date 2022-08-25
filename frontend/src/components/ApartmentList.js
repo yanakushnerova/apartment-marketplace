@@ -17,10 +17,12 @@ const ApartmentList = () => {
 
     return (
         <div>
-            apartment list
-            {apartments.map((apartment) => {
-                return <ApartmentListItem key={apartment._id} {...apartment} />
-            })}
+            <p>Available apartments: {apartments.length}</p>
+            { apartments ? (
+                apartments.map((apartment) => {
+                    return <ApartmentListItem key={apartment._id} {...apartment} />
+                })
+            ) : (<p>no apartments</p>)}
         </div>  
     )
 }
