@@ -71,35 +71,47 @@ const ApartmentCreationForm = (props) => {
     }
 
     return (
-        <div>
-            { error || <p>{error}</p> }
-            <form onSubmit={onSubmit}>
-                <input
-                    placeholder="name"
-                    type="text"
-                    value={name}
-                    onChange={onNameChange}
-                ></input>
-                <input
-                    placeholder="rooms"
-                    type="text"
-                    value={rooms}
-                    onChange={onRoomsChange}
-                ></input>
-                <input
-                    placeholder="price"
-                    type="text"
-                    value={price}
-                    onChange={onPriceChange}
-                ></input>
-                <textarea
-                    placeholder="description"
-                    value={description}
-                    onChange={onDescriptionChange}
-                />
+        <div className="container">
+            <div>
+                <div className="apartment__creation">
+                    { !props.apartment ? <p className="apartment__creation__title">Create new ad</p> :
+                     <p className="apartment__creation__title">Edit your ad</p> }
+                    { error || <p className="apartment__creation__error">{error}</p> }
+                    <form className="apartment__creation__form" onSubmit={onSubmit}>
+                        <input
+                            className="apartment__creation__form__name"
+                            placeholder="name"
+                            type="text"
+                            value={name}
+                            onChange={onNameChange}
+                        ></input>
+                        <input
+                            className="apartment__creation__form__rooms"
+                            placeholder="rooms"
+                            type="text"
+                            value={rooms}
+                            onChange={onRoomsChange}
+                        ></input>
+                        <input
+                            className="apartment__creation__form__price"
+                            placeholder="price, $"
+                            type="text"
+                            value={price}
+                            onChange={onPriceChange}
+                        ></input>
+                        <input
+                            className="apartment__creation__form__description"
+                            type="text"
+                            placeholder="description"
+                            value={description}
+                            onChange={onDescriptionChange}
+                        ></input>
 
-                { props.apartment ? <button>save</button> : <button>create</button>}
-            </form>
+                        { props.apartment ? <button className="create__button">save changes</button> : 
+                        <button className="create__button">create</button>}
+                    </form>
+                </div>
+            </div>
         </div>
     )
 }

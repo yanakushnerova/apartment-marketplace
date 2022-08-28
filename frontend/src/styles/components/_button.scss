@@ -1,0 +1,27 @@
+button {
+    height: 29px;
+    padding: 0 20px;
+    border: none;
+    font-family: 'Roboto Slab', serif;
+    border-radius: $s-radius;
+}
+
+.create__button {
+    background-color: $lightBlue;
+}
+
+.create__button:hover {
+    background-color: $blue;
+}
+
+.delete__button {
+    background-color: $blue;
+}
+
+.delete__button:hover {
+    background-color: $darkBlue;
+}
+
+.margin__button {
+    margin-right: 10px;
+}

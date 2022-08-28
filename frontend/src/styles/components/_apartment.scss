@@ -1,0 +1,99 @@
+.apartment__creation {
+    background-color: $lightGray;
+    border-radius: $m-radius;
+    padding: $s-size 0;
+}
+
+.apartment__creation__title {
+    font-weight: bold;
+    margin: 0 0 $s-size 0;
+    color: $darkBlue;
+}
+
+.apartment__creation__form {
+    margin-top: $s-size;
+    white-space: nowrap;
+}
+
+.apartment__creation__form > * {
+    display: inline-block;
+}
+
+.apartment__creation__form > input {
+    margin-right: 10px;
+    padding: 0 5px;
+}
+
+.apartment__creation__form__name {
+    width: 130px;
+}
+
+.apartment__creation__form__rooms, .apartment__creation__form__price {
+    width: 45px;
+}
+
+.apartment__creation__form__description {
+    width: 150px;
+}
+
+.apartment__list__filters {
+    white-space: nowrap;
+    margin-top: 20px;
+}
+
+.apartment__list__filters > * {
+    display: inline-block;
+}
+
+.apartment__list__filters > p, .apartment__list__filters > input, .apartment__list__filters > select {
+    margin-right: 10px;
+}
+
+.apartment__list__filters > input {
+    background-color: $lightGray;
+}
+
+.apartment__list {
+    background-color: $lightGray;
+    border-radius: $m-radius;
+    padding-bottom: 30px;
+}
+
+.apartment__list__available {    
+    padding-top: 20px;
+}
+
+.apartment__list__item__info {
+    word-wrap: break-word;
+    padding-top: 10px;
+}
+
+.apartment__item {
+    background-color: $gray;
+    border-radius: $s-size;
+    padding-bottom: 10px;
+}
+
+.apartment__page__info {
+    word-wrap: break-word;
+}
+
+.apartment__page__buttons {
+    margin-bottom: 20px;
+}
+
+input, select {
+    height: 28px;
+    border: none;
+    border-radius: $s-radius;
+    padding: 0 5px;
+    font-family: 'Roboto Slab', serif;
+}
+
+select {
+    background-color: $lightGray;
+}
+
+*:focus {
+    outline: none;
+}

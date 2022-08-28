@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 
@@ -19,16 +19,18 @@ const ApartmentListItem = (props) => {
     }
 
     return (
-        <div>
-            <p>{props.name}</p>
-            <p>{props.rooms}</p>
-            <p>{props.price}</p>
-            
-            <button>rent</button>
-            <button onClick={() => {
-                navigator(`/apartments/${props._id}`)
-            }}>show details</button>
-            <button onClick={onDelete}>delete</button>
+        <div className="container">
+            <div className="apartment__item">
+                <p className="apartment__list__item__info">
+                    {props.name} / {props.rooms} {props.rooms === 1 ? 'room' : 'rooms'} / {props.price}$ per night
+                </p>
+                
+                <button className="create__button margin__button" onClick={() => {
+                    navigator(`/apartments/${props._id}`)
+                }}>show details</button>
+
+                <button className="delete__button" onClick={onDelete}>delete</button>
+            </div>
         </div>
     )
 }

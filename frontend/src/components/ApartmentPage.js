@@ -32,15 +32,20 @@ const ApartmentPage = () => {
     
     return (
         <div>
-           apartment page
-           <p>{apartment.name}</p>
-           <p>{apartment.rooms}</p>
-           <p>{apartment.price}</p>
-           <p>{apartment.description}</p>
+            <div className="container">
+                <div className="apartment__page__info">
+                    <p>{apartment.name}</p>
+                    <p>{apartment.rooms} {apartment.rooms === 1 ? 'room' : 'rooms'}, {apartment.price}$ per one night</p>
+                    <p>{apartment.description}</p>
+                </div>
 
-           <button onClick={onEditApartment}>edit</button>
-           <button onClick={onBackButton}>back</button>
-           {visible && <ApartmentCreationForm apartment={apartment} apartmentId={id} />}
+                <div className="apartment__page__buttons">
+                    <button className="create__button margin__button" onClick={onEditApartment}>edit</button>
+                    <button className="delete__button" onClick={onBackButton}>back</button>
+                </div>
+            </div>
+
+            {visible && <ApartmentCreationForm apartment={apartment} apartmentId={id} />}
         </div>
     )
 }

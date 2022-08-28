@@ -1,11 +1,10 @@
 import React from 'react'
-import axios from 'axios'
 import ApartmentList from './ApartmentList'
-import AddApartment from './AddApartment'
+import ApartmentCreationForm from './ApartmentCreationForm'
 
 const ApartmentsPage = () => (
     <div>
-        <AddApartment />
+        <ApartmentCreationForm />
         <ApartmentList />
     </div>
 )

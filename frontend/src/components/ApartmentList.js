@@ -51,23 +51,29 @@ const ApartmentList = () => {
     useEffect(loadApartments, [])
 
     return (
-        <div>
-            <p>sort by price</p>
-            <select value={sortPrice} onChange={onSortPriceChange}>
-                <option value='none'>none</option>
-                <option value='asc'>from lowest to highest</option>
-                <option value='desc'>from highest to lowest</option>
-            </select>
-            
-            <input type='text' value={filterRooms} onChange={onFilterRoomsChange} placeholder="number of rooms"></input>
-            <button onClick={onApplyFilters}>search</button>
-
-            <p>Available apartments: {apartments.length}</p>
-            { apartments ? (
-                apartments.map((apartment) => {
-                    return <ApartmentListItem key={apartment._id} {...apartment} />
-                })
-            ) : (<p>no apartments</p>)}
+        <div className="container">
+            <div>
+                <div className="apartment__list__filters">
+                    <p>Sort by price:</p>
+                    <select value={sortPrice} onChange={onSortPriceChange}>
+                        <option value='none'>none</option>
+                        <option value='asc'>from lowest to highest</option>
+                        <option value='desc'>from highest to lowest</option>
+                    </select>
+                    
+                    <input type='text' value={filterRooms} onChange={onFilterRoomsChange} placeholder="number of rooms"></input>
+                    <button className="create__button" onClick={onApplyFilters}>search</button>
+                </div>
+                
+                <div className="apartment__list">
+                    <p className="apartment__list__available">Available apartments: {apartments.length}</p>
+                    { apartments && (
+                        apartments.map((apartment) => {
+                            return <ApartmentListItem key={apartment._id} {...apartment} />
+                        })
+                    )}
+                </div>
+            </div>
         </div>  
     )
 }
