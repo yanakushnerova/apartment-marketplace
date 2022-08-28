@@ -2,7 +2,7 @@ button {
     height: 29px;
     padding: 0 20px;
     border: none;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Poppins', sans-serif;
     border-radius: $s-radius;
 }
 
@@ -15,11 +15,13 @@ button {
 }
 
 .delete__button {
-    background-color: $blue;
+    background-color: $red;
+    color: $white;
 }
 
 .delete__button:hover {
-    background-color: $darkBlue;
+    background-color: $lightRed;
+    color: $white;
 }
 
 .margin__button {

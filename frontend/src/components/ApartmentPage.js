@@ -41,7 +41,7 @@ const ApartmentPage = () => {
 
                 <div className="apartment__page__buttons">
                     <button className="create__button margin__button" onClick={onEditApartment}>edit</button>
-                    <button className="delete__button" onClick={onBackButton}>back</button>
+                    <button className="create__button" onClick={onBackButton}>back</button>
                 </div>
             </div>
 
